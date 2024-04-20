@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.woojun.fried_chat.R
 import com.woojun.fried_chat.databinding.FragmentChatBinding
 import com.woojun.fried_chat.databinding.FragmentPublicCommunityBinding
@@ -13,6 +14,7 @@ class PublicCommunityFragment : Fragment() {
 
     private var _binding: FragmentPublicCommunityBinding? = null
     private val binding get() = _binding!!
+    private val list = mutableListOf<Feed>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +26,10 @@ class PublicCommunityFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            feedRecyclerView.layoutManager = LinearLayoutManager(requireContext().applicationContext)
+            feedRecyclerView.adapter = PublicCommunityAdapter(list)
+        }
     }
 
     override fun onDestroyView() {
