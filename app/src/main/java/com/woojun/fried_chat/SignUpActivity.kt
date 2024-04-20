@@ -86,6 +86,11 @@ class SignUpActivity : AppCompatActivity() {
                     Toast.makeText(this@SignUpActivity, "모든 칸을 입력해주세요", Toast.LENGTH_SHORT).show()
                 }
             }
+
+            moveButton.setOnClickListener {
+                startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
+                finish()
+            }
         }
     }
 }
