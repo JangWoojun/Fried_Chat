@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/chat_box"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/white"
+        android:id="@+id/image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:cardCornerRadius="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F1F2F5"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:src="@drawable/face1_icon"
+            android:id="@+id/imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:layout_marginStart="11dp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:background="@drawable/chat_other_background"
+        android:linksClickable="true"
+        android:paddingVertical="7dp"
+        android:paddingHorizontal="14dp"
+        android:textSize="13sp"
+        android:text="안녕하세요"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
