@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/select_public_community_icon"
+        android:id="@+id/public_community"
+        android:title="public_community" />
+    <item
+        android:icon="@drawable/private_community_icon"
+        android:id="@+id/private_community"
+        android:title="private_community" />
+    <item
+        android:icon="@drawable/chat_icon"
+        android:id="@+id/chat"
+        android:title="chat" />
+    <item
+        android:icon="@drawable/account_icon"
+        android:id="@+id/account"
+        android:title="account" />
+</menu>

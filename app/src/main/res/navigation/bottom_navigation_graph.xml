@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_graph"
+    app:startDestination="@id/public_community">
+
+    <fragment
+        android:id="@+id/account"
+        android:name="com.woojun.fried_chat.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.woojun.fried_chat.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/private_community"
+        android:name="com.woojun.fried_chat.private_community.PrivateCommunityFragment"
+        android:label="fragment_private_community"
+        tools:layout="@layout/fragment_private_community" />
+    <fragment
+        android:id="@+id/public_community"
+        android:name="com.woojun.fried_chat.public_community.PublicCommunityFragment"
+        android:label="fragment_public_community"
+        tools:layout="@layout/fragment_public_community" />
+</navigation>
