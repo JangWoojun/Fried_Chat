@@ -6,15 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.woojun.fried_chat.R
-import com.woojun.fried_chat.databinding.FragmentChatBinding
 import com.woojun.fried_chat.databinding.FragmentPublicCommunityBinding
 
 class PublicCommunityFragment : Fragment() {
 
     private var _binding: FragmentPublicCommunityBinding? = null
     private val binding get() = _binding!!
-    private val list = mutableListOf<Feed>()
+    private val list = mutableListOf<PublicFeed>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

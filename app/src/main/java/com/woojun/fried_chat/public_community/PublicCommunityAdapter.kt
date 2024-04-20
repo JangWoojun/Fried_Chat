@@ -8,7 +8,7 @@ import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.request.RequestOptions
 import com.woojun.fried_chat.databinding.PublicFeedItemBinding
 
-class PublicCommunityAdapter(private val feeds: MutableList<Feed>): RecyclerView.Adapter<PublicCommunityAdapter.PublicCommunityViewHolder>() {
+class PublicCommunityAdapter(private val feeds: MutableList<PublicFeed>): RecyclerView.Adapter<PublicCommunityAdapter.PublicCommunityViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PublicCommunityViewHolder {
         val binding = PublicFeedItemBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -33,7 +33,7 @@ class PublicCommunityAdapter(private val feeds: MutableList<Feed>): RecyclerView
 
     class PublicCommunityViewHolder(private val binding: PublicFeedItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(feed: Feed) {
+        fun bind(feed: PublicFeed) {
             binding.apply {
                 Glide.with(binding.root.context)
                     .load(feed.image)
