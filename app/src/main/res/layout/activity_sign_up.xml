@@ -83,6 +83,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3">
 
             <EditText
+                android:inputType="textPassword"
                 android:id="@+id/password_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,6 +108,7 @@
             app:layout_constraintTop_toBottomOf="@+id/password_box">
 
             <EditText
+                android:inputType="textPassword"
                 android:id="@+id/password_check_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -180,6 +182,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/gender_text"
                     android:textSize="18sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
