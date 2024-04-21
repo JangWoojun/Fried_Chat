@@ -53,6 +53,7 @@ class PrivateCommunityAdapter(private val feeds: MutableList<PrivateFeed>): Recy
                 }
                 nicknameText.text = "익명$position"
                 feedText.text = feed.feedText
+                tagText.text = feed.tag.toString()
             }
         }
     }
