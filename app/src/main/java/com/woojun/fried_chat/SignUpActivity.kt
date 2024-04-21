@@ -41,31 +41,43 @@ class SignUpActivity : AppCompatActivity() {
                 dialog.setTitle("Gender")
                     .setItems(genderList) { _, index ->
                         gender = when (index) {
-                            0 -> "g"
-                            1 -> "l"
-                            2 -> "t"
-                            else -> "g"
+                            0 -> {
+                                genderText.text = "Gay"
+                                "g"
+                            }
+                            1 -> {
+                                genderText.text = "Lesbian"
+                                "l"
+                            }
+                            2 -> {
+                                genderText.text = "Transgender"
+                                "t"
+                            }
+                            else -> {
+                                genderText.text = "Gay"
+                                "g"
+                            }
                         }
-
+                        genderText.setTextColor(Color.BLACK)
                     }
                 dialog.show()
             }
 
             finishButton.setOnClickListener {
                 if (emailInput.text.isNotEmpty() && passwordInput.text.isNotEmpty() && passwordCheckInput.text.isNotEmpty() && gender.isNotEmpty() && nicknameInput.text.isNotEmpty()) {
-                    if (passwordInput.text == passwordCheckInput.text) {
+                    if (passwordInput.text.toString() == passwordCheckInput.text.toString()) {
                         val user = when(gender) {
                             "g" -> {
-                                User(nicknameInput.text.toString(), Gender.Gay)
+                                User(nicknameInput.text.toString(), Gender.Gay, "https://firebasestorage.googleapis.com/v0/b/fried-chat.appspot.com/o/images%2FGroup%20206.png?alt=media&token=bb3b6a33-bec7-4f92-98f0-37446abb1497")
                             }
                             "l" -> {
-                                User(nicknameInput.text.toString(), Gender.Lesbian)
+                                User(nicknameInput.text.toString(), Gender.Lesbian, "https://firebasestorage.googleapis.com/v0/b/fried-chat.appspot.com/o/images%2FGroup%20206.png?alt=media&token=bb3b6a33-bec7-4f92-98f0-37446abb1497")
                             }
                             "t" -> {
-                                User(nicknameInput.text.toString(), Gender.Transgender)
+                                User(nicknameInput.text.toString(), Gender.Transgender, "https://firebasestorage.googleapis.com/v0/b/fried-chat.appspot.com/o/images%2FGroup%20206.png?alt=media&token=bb3b6a33-bec7-4f92-98f0-37446abb1497")
                             }
                             else -> {
-                                User(nicknameInput.text.toString(), Gender.Gay)
+                                User(nicknameInput.text.toString(), Gender.Gay, "https://firebasestorage.googleapis.com/v0/b/fried-chat.appspot.com/o/images%2FGroup%20206.png?alt=media&token=bb3b6a33-bec7-4f92-98f0-37446abb1497")
                             }
                         }
 
