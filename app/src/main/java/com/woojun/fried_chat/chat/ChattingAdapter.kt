@@ -6,9 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.woojun.fried_chat.R
 import com.woojun.fried_chat.databinding.ChatItemBinding
 import com.woojun.fried_chat.databinding.OtherChatItemBinding
 
@@ -49,7 +46,6 @@ class ChattingAdapter(private val chatList: MutableList<Chat>): RecyclerView.Ada
         chatList.add(chat)
 
         if (position > 0) {
-            chatList[position - 1].viewShow = false
             notifyItemRangeChanged(position - 1, 1)
         } else {
             notifyItemInserted(chatList.size - 1)
@@ -134,7 +130,6 @@ class ChattingAdapter(private val chatList: MutableList<Chat>): RecyclerView.Ada
         fun init() {
             binding.apply {
                 messageText.text = ""
-                image.visibility = View.INVISIBLE
             }
         }
         fun bind(chat: Chat) {
