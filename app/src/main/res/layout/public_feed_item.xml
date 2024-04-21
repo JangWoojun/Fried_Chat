@@ -81,6 +81,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/like_image"
             android:src="@drawable/like_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -113,7 +114,7 @@
         <TextView
             android:id="@+id/chat_text"
             android:textSize="10sp"
-            android:text="0개"
+            android:text="댓글"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
