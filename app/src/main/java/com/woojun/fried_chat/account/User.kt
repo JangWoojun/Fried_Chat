@@ -4,6 +4,7 @@ import com.woojun.fried_chat.private_community.Gender
 
 
 data class User(
-    val nickname: String,
-    val gender: Gender
+    var nickname: String = "",
+    var gender: Gender = Gender.Gay,
+    var image: String = ""
 )
