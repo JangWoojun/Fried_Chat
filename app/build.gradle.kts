@@ -5,6 +5,12 @@ plugins {
 }
 
 android {
+
+    packagingOptions {
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/DEPENDENCIES")
+    }
+
     namespace = "com.woojun.fried_chat"
     compileSdk = 34
 
@@ -60,4 +66,6 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx")
     implementation("com.google.firebase:firebase-storage")
 
+    implementation("com.google.cloud:google-cloud-dialogflow:2.0.0")
+    implementation("io.grpc:grpc-okhttp:1.38.0")
 }
