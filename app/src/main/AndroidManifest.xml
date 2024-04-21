@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Fried_Chat"
         tools:targetApi="31">
         <activity
+            android:name=".account.ProfileEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".private_community.PrivateWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".public_community.PublicWriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
